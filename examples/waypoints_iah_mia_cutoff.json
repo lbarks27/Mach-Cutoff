@@ -1,0 +1,18 @@
+{
+  "name": "IAH to MIA cutoff cruise",
+  "notes": "Direct great-circle cruise at 17,000 m between points above Houston Intercontinental and Miami International.",
+  "waypoints": [
+    {
+      "lat": 29.9844,
+      "lon": -95.3414,
+      "alt_m": 17000,
+      "time_utc": "2025-01-15T15:00:00Z"
+    },
+    {
+      "lat": 25.7959,
+      "lon": -80.287,
+      "alt_m": 17000,
+      "time_utc": "2025-01-15T16:15:00Z"
+    }
+  ]
+}

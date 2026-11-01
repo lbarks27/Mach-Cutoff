@@ -1,0 +1,88 @@
+{
+  "hrrr": {
+    "cache_dir": ".cache/hrrr",
+    "domain": "conus",
+    "product": "wrfprsf",
+    "use_s3fs": true,
+    "http_fallback": true,
+    "download_workers": 8,
+    "local_grib_dir": null,
+    "keep_downloaded_files": true
+  },
+  "grid": {
+    "half_width_east_m": 200000.0,
+    "half_width_north_m": 200000.0,
+    "min_altitude_m": -1000.0,
+    "max_altitude_m": 32000.0,
+    "nx": 96,
+    "ny": 96,
+    "nz": 72,
+    "gradient_step_m": 25.0,
+    "wind_projection_mode": "heading"
+  },
+  "aircraft": {
+    "mach": 1.05,
+    "constant_altitude_m": 16500.0,
+    "reference_sound_speed_mps": 340.29
+  },
+  "shock": {
+    "emission_interval_s": 5.0,
+    "rays_per_emission": 9,
+    "downward_only": false,
+    "azimuth_offset_deg": 0.0,
+    "direction_reference": "aircraft_forward"
+  },
+  "raytrace": {
+    "ds_m": 200.0,
+    "max_steps": 4000,
+    "adaptive": true,
+    "tol": 0.0005,
+    "min_step_m": 15.0,
+    "max_step_m": 900.0,
+    "stop_on_exit": true
+  },
+  "runtime": {
+    "start_time_iso": null,
+    "end_time_iso": null,
+    "max_emissions": 180,
+    "ray_batch_size": 10
+  },
+  "population": {
+    "enabled": true,
+    "dataset_path": null,
+    "heatmap_cell_deg": 0.1,
+    "hit_radius_km": 80.0,
+    "trace_half_width_km": 14.0
+  },
+  "route_optimization": {
+    "enabled": true,
+    "max_wall_time_s": 240.0,
+    "reserve_time_for_full_fidelity_s": 55.0,
+    "seed": 17,
+    "batch_size": 4,
+    "finalists": 2,
+    "min_control_waypoints": 11,
+    "enable_fuel_objective": true,
+    "weight_population": 3.5,
+    "weight_speed": 1.8,
+    "weight_fuel": 0.015,
+    "weight_populated_ground_hits": 24.0,
+    "weight_total_ground_hits": 0.08,
+    "unpopulated_speed_weight_bonus": 3.2,
+    "min_fuel_weight_scale": 0.0,
+    "populated_hit_people_threshold": 1.0,
+    "populated_cell_people_threshold": 1.0,
+    "population_guard_hit_radius_km": 90.0,
+    "low_fidelity_max_emissions": 72
+  },
+  "visualization": {
+    "enable_matplotlib": false,
+    "enable_plotly": false,
+    "enable_pyvista": false,
+    "output_dir": "outputs_tuning_fast",
+    "make_animation": false,
+    "write_html": false,
+    "include_atmosphere": false,
+    "map_style": "topographic"
+  }
+}
